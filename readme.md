@@ -20,7 +20,7 @@ Noise reduction and accuracy improver of a Speech Recognition machine learning m
 
 # How to Run / Usage
 - Clone or download this repository
-- Run program (TODO)
+- Type `python main.py` into your terminal.
 
 ## Authors
 - Aman Hogan-Bailey

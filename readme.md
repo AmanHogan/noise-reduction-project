@@ -7,10 +7,11 @@ Noise reduction and accuracy improver of a Speech Recognition machine learning m
 **Challenge:** Accuracy is the main challenge that is being faced in this market of speech recognition. Even Google sometimes misinterprets what a person is actually saying. The accuracy also hinders due the background noise while a person is speaking. So to reduce the noise in order to have a crystal clear audio is what we will be trying to do in this project.
 
 ## Current Structure
-- Training Data
-- Feature Extraction
-- Learning Algorithm
-- Audio Reconstruction (MFCC and spectrogram)
+1. Pre proccess data and perform feature extraction
+2. Arrange features and labels into a vector
+3. Use learning alogrithm to predict audio features for clean data, given noisy data
+4. Using learned model, take in input and use predection to get clean audio vector
+5. Reconstruct audio from that feature vector
 
 ## Prerequisites
 - A Windows 10 or Mac OS computer

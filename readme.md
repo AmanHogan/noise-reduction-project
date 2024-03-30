@@ -28,7 +28,7 @@ From our implemntation we have KNN, Random Forest bagging, and Linear Regression
 $model(noisy_{input})$ &#8594; $clean_{target}$
 
 6. We print the predicted melspectrum data and reconstruct an audio file using that melspectrum. If the noise was successfuly removed, we should get a melspectrum that looks like so: 
-![img](./spectrograms.png)
+![img](./spectrograms.jpg)
 
 # Prerequisites
 - A Windows 10 or Mac OS computer
@@ -71,12 +71,6 @@ $model(noisy_{input})$ &#8594; $clean_{target}$
    - `<input_path>`: Path to input file. Default: './sample-data/dm1_n0H.wav'
 
 5. The Program should then execute and save a new audio file called `target_audio.wav` which is your denoised audio
-
-
-
-
-
-
 
 # Background Information
 #### What is a Melspectrogram?

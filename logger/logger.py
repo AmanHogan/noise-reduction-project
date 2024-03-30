@@ -21,7 +21,6 @@ def log(message, to_console_only=None) -> None:
 
     with open('./logger/logfile.txt', 'a') as log_file:
         log_file.write(log_message + '\n')
-        print(log_message)
 
 # Example usage:
 if __name__ == "__main__":

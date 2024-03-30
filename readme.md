@@ -38,6 +38,7 @@ $model(noisy_{input})$ &#8594; $clean_{target}$
 - Python modules: `Librosa`, `SciPy`, `PyDub`, `SoundFile`, `numpy`, and `pandas` 
 
 # How to Run / Usage
+ dev
 1. Clone the repository or download the files to your local machine.
 
 2. Install the required libraries if you haven't already:
@@ -94,6 +95,10 @@ The data set can be found at: https://www.ee.columbia.edu/~dpwe/sounds/ and is i
 #### What if the audios are NOT the same length?
 If the audio lengths are not the same length, we pad the audio using the length of the longest audio clip in the dataset. Padding typically refers to adding silence or zeros to the beginning or end of an audio signal to adjust its length or to facilitate certain operations such as Fourier transforms.
 ng.
+=======
+- Clone or download this repository
+- Type `python main.py` into your terminal.
+ main
 
 ## Authors
 - Aman Hogan-Bailey

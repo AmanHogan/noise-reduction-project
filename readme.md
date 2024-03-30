@@ -12,31 +12,13 @@ The project aims to train a learning model on an audio dataset and remove the no
 2. Extract the Melspectrogram (important audio feature) from both the noisy and clean audio files
 3. Arrange the noisy and clean melspectrograms into a vector format, where the noisy melspectrograms are the features and the clean melspectrograms are lables. The vector should look like this:
 
-$x_{\text{noisy}} = 
-\begin{bmatrix} 
-\text{noisy}_1 \\ 
-\text{noisy}_2 \\ 
-\vdots \\ 
-\text{noisy}_n 
-\end{bmatrix}$
+$$x_{noisy} = \begin{bmatrix} noisy_{1} \\\ noisy_{2} \\\ ... \\\ noisy_{n} \end{bmatrix}$$
 
-$y_{\text{clean}} = 
-\begin{bmatrix} 
-\text{clean}_1 \\ 
-\text{clean}_2 \\ 
-\vdots \\ 
-\text{clean}_n 
-\end{bmatrix}$
+$$y_{clean} = \begin{bmatrix} clean_{1} \\\ clean_{2} \\\ ... \\\ clean_{n} \end{bmatrix}$$
 
-$data = 
-\begin{bmatrix} 
-\text{noisy}_1, \text{clean}_1 \\ 
-\text{noisy}_2, \text{clean}_2 \\ 
-\vdots \\ 
-\text{noisy}_n, \text{clean}_n 
-\end{bmatrix}$
+$$data = \begin{bmatrix} noisy_{1},clean_{1} \\\ noisy_{2},clean_{2} \\\ ... \\\ noisy_{n},clean_{n}\end{bmatrix}$$
 
-*Where $n$ is the number of samples*
+*Where n is the number of samples*
 
 4. With our dataset we create a model using a learning algorithm such that we have a mapping of noisy features to clean labels:
 $f(noisy)$ &#8594; $clean$

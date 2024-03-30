@@ -28,7 +28,7 @@ From our implemntation we have KNN, Random Forest bagging, and Linear Regression
 $model(noisy_{input})$ &#8594; $clean_{target}$
 
 6. We print the predicted melspectrum data and reconstruct an audio file using that melspectrum. If the noise was successfuly removed, we should get a melspectrum that looks like so: 
-   ![](./spectrograms.jpg)
+   ![img](./spectrograms.jpg)
 
 # Prerequisites
 - A Windows 10 or Mac OS computer

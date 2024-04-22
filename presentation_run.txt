@@ -1,0 +1,9 @@
+Presentation CMDS:
+
+(extractor) Data Preproccessing
+
+Training Example (KNN):
+python main.py --input ./sample-data/sm3_n2H.wav  --a knn --neighbors 3 --sound_type sentence --gender male --hidden_size 64 --batch_size 6 --epochs 4 --num_rnn_layers 4
+
+Evaluation Example (KNN):
+python test_model.py --input ./sample-data/sm3_n2H.wav  --a knn --neighbors 3 --sound_type sentence --gender male --hidden_size 64 --batch_size 6 --epochs 4 --num_rnn_layers 4 -e eval

@@ -7,10 +7,8 @@ import matplotlib.pyplot as plt
 from logger.logger import log
 import soundfile as sf
 
-
-def reconstruct_audio(y, sr):
-    """
-    Reconstruct audio using new clean spectrogram
+def reconstruct_audio(y, sr, filename):
+    """Reconstruct audio using new clean spectrogram
 
     Args:
         y (ndarray): target melspectrogram
@@ -19,14 +17,11 @@ def reconstruct_audio(y, sr):
 
     # Convert Mel spectrogram to linear spectrogram (STFT magnitude)
     linear_spectrogram = librosa.feature.inverse.mel_to_stft(y)
-
-    # Write new audio file
     y_reconstructed = librosa.griffinlim(linear_spectrogram)
-    sf.write("target_audio.wav", y_reconstructed, sr)
+    sf.write(filename, y_reconstructed, sr)
 
 def display_spectrograms(x, y, sr):
-    """
-    Display noisy and clean audio files
+    """Display noisy and clean audio files
 
     Args:
         x (ndarray): noisy audio file input

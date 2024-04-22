@@ -1,10 +1,9 @@
 """Responsible for extracting noisy and clean features and lables from audio"""
 
-import os
 import librosa
 import numpy as np
 from logger.logger import log
-
+import numpy as np
 
 class FeatureExtractor:
 
@@ -30,12 +29,14 @@ class FeatureExtractor:
         self.FMIN = 20
 
     def extract_features_single(self, file_path):
-        """
-        Extracts melspectrogram from a given audio file
-        Args: file_path (str): file path
-        Returns: ndarray, _Shape: feature vector, melspect shape
-        """
+        """Extracts melspectrogram from a given audio file
         
+        Args: 
+            file_path (str): file path
+        
+        Returns:
+            ndarray, _Shape: feature vector, melspect shape
+        """
         # Load noisy audio file
         y_noisy, sr_noisy = librosa.load(file_path)
 
@@ -77,7 +78,6 @@ class FeatureExtractor:
             self.labels.append(melspectrogram_filtered.flatten())
 
             self.t_extracted += 1
-
             print(f"Finished extracting: {n_file} {f_file} | {round(self.t_extracted/len(self.f_paths), 4)}% COMPLETE")
 
         return np.array(self.features), np.array(self.labels)

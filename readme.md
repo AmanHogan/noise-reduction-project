@@ -12,13 +12,15 @@ The project aims to train a learning model on an audio dataset and remove the no
 2. Extract the Melspectrogram (important audio feature) from both the noisy and clean audio files
 3. Arrange the noisy and clean melspectrograms into a vector format, where the noisy melspectrograms are the features and the clean melspectrograms are lables. The vector should look like this:
 
-$$x_{noisy} = \begin{bmatrix} noisy_{1} \\\ noisy_{2} \\\ ... \\\ noisy_{n} \end{bmatrix}$$
+$x_{noisy} = 
+\begin{bmatrix} noisy_{1} \\\ noisy_{2} \\\ ... \\\ noisy_{n}
+\end{bmatrix}$ $y_{clean} = 
+\begin{bmatrix} clean_{1} \\\ clean_{2} \\\ ... \\\ clean_{n}
+\end{bmatrix}$
 
-$$y_{clean} = \begin{bmatrix} clean_{1} \\\ clean_{2} \\\ ... \\\ clean_{n} \end{bmatrix}$$
-
-$$data = \begin{bmatrix} noisy_{1},clean_{1} \\\ noisy_{2},clean_{2} \\\ ... \\\ noisy_{n},clean_{n}\end{bmatrix}$$
-
-*Where n is the number of samples*
+$data = 
+\begin{bmatrix} noisy_{1},clean_{1} \\\ noisy_{2},clean_{2} \\\ ... \\\ noisy_{n},clean_{n}
+\end{bmatrix}$ *Where $n$ is the number of samples*
 
 4. With our dataset we create a model using a learning algorithm such that we have a mapping of noisy features to clean labels:
 $f(noisy)$ &#8594; $clean$
@@ -28,7 +30,7 @@ From our implemntation we have KNN, Random Forest bagging, and Linear Regression
 $model(noisy_{input})$ &#8594; $clean_{target}$
 
 6. We print the predicted melspectrum data and reconstruct an audio file using that melspectrum. If the noise was successfuly removed, we should get a melspectrum that looks like so: 
-![img](./spectrograms.jpg)
+![img](./spectrograms.png)
 
 # Prerequisites
 - A Windows 10 or Mac OS computer
@@ -76,7 +78,6 @@ $model(noisy_{input})$ &#8594; $clean_{target}$
 #### What is a Melspectrogram?
 A mel spectrogram, short for mel-frequency spectrogram, is a representation of the spectrum of a signal as it varies over time. To create a melspectrogram you split the signal into short segments, typically using a technique like the Fast Fourier Transform (FFT). Each segment represents a snapshot of the signal's frequency content at a particular moment in time. The freequency is then converted to a scale that represents human hearing (Mel-scale). Then the power of each frequency is represented by decibels.
 
-
 #### What is a Sample Rate?
 Sample rate refers to the number of samples of audio captured per second, typically measured in hertz (Hz). It determines the fidelity with which analog audio is converted into a digital format.For example, a sample rate of 44.1 kHz means that 44,100 samples are taken per second to represent the audio signal. In out project, the dataset had a sample rate of 22,050
 
@@ -87,7 +88,7 @@ The data set can be found at: https://www.ee.columbia.edu/~dpwe/sounds/ and is i
 #### What if the audios are NOT the same length?
 If the audio lengths are not the same length, we pad the audio using the length of the longest audio clip in the dataset. Padding typically refers to adding silence or zeros to the beginning or end of an audio signal to adjust its length or to facilitate certain operations such as Fourier transforms.
 ng.
-
+=======
 - Clone or download this repository
 - Type `python main.py` into your terminal.
  main
